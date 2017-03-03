@@ -23,7 +23,7 @@ require 'axlsx/workbook/workbook.rb'
 require 'axlsx/package.rb'
 #required gems
 require 'nokogiri'
-require 'zip'
+require 'zip/zip'
 
 #core dependencies
 require 'bigdecimal'
