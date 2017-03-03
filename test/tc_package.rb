@@ -119,7 +119,7 @@ class TestPackage < Test::Unit::TestCase
     assert_nothing_raised do
       begin
         @package.serialize(@fname)
-        zf = Zip::File.open(@fname)
+        zf = Zip::ZipFile.open(@fname)
         @package.send(:parts).each{ |part| zf.get_entry(part[:entry]) }
         File.delete(@fname)
       rescue Errno::EACCES
